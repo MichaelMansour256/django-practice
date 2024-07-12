@@ -1,5 +1,26 @@
 {% extends "emp_register/base.html" %}
 
 {% block content %}
-<p>show list of emp</p>
+<table class="table table-borderless">
+    <thead class="border-bottom font-wieght-bold">
+        <tr>
+            <td>Full Name</td>
+            <td>Emp Code</td>
+            <td>Mobile</td>
+            <td>poision</td>
+            
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in employee_list %}
+        <tr>
+            <td>{{emp.fullname}}</td>
+            <td>{{emp.emp_code}}</td>
+            <td>{{emp.mobile}}</td>
+            <td>{{emp.position}}</td>
+            
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock content %}
