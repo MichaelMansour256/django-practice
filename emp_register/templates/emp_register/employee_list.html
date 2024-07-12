@@ -8,6 +8,7 @@
             <td>Emp Code</td>
             <td>Mobile</td>
             <td>poision</td>
+            <td></td>
             
         </tr>
     </thead>
@@ -18,6 +19,11 @@
             <td>{{emp.emp_code}}</td>
             <td>{{emp.mobile}}</td>
             <td>{{emp.position}}</td>
+            <td>
+                <a href="{% url 'employee_update' emp.id %}" class="btn text-secondry px-0">
+                    <li class="far fa-edit fa-lg"></li>
+                </a>
+            </td>
             
         </tr>
         {% endfor %}
